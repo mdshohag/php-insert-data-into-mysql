@@ -2,12 +2,9 @@
 
     //error_reporting(0);
 
-     require_once('../admin/cls_dbconfig.php');
-            function __autoload($classname){
-              require_once("$classname.class.php");
-            }
-        $cls_dbconfig = new cls_dbconfig();
-        $connect = $cls_dbconfig->connection();
+ 
+
+        $connect = new mysqli("localhost", "root", "", "iteqtservice");
 
           if(isset($_POST["submit"]))
           {
